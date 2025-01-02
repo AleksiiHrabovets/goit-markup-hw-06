@@ -381,13 +381,19 @@ button {
   padding-top: 72px;
   padding-bottom: 72px;
   justify-content: center;
-  background-image: url(../images/people-office.jpg);
+  background-image: image-set(
+    url(../images/people-officeTele/heroimage.jpg) 1x,
+    url(../images/people-officeTele/heroimage2x.jpg) 2x
+  );
   background-image: linear-gradient(
       to bottom,
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office.jpg);
+    image-set(
+      url(../images/people-officeTele/heroimage.jpg) 1x,
+      url(../images/people-officeTele/heroimage2x.jpg) 2x
+    );
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -441,13 +447,19 @@ button {
     padding-top: 112px;
     padding-bottom: 112px;
     justify-content: center;
-    background-image: url(../images/people-office.jpg);
+    background-image: image-set(
+      url(../images/people-officePlan/Dark-bg.jpg) 1x,
+      url(../images/people-officePlan/Dark-bg2x.jpg) 2x
+    );
     background-image: linear-gradient(
         to bottom,
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/people-office.jpg);
+      image-set(
+        url(../images/people-officePlan/Dark-bg.jpg) 1x,
+        url(../images/people-officePlan/Dark-bg2x.jpg) 2x
+      );
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -499,13 +511,19 @@ button {
     padding-top: 188px;
     padding-bottom: 188px;
     justify-content: center;
-    background-image: url(../images/people-office.jpg);
+    background-image: image-set(
+      url(../images/people-officePC/people-office.jpg) 1x,
+      url(../images/people-officePC/people-office2x.jpg) 2x
+    );
     background-image: linear-gradient(
         to bottom,
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/people-office.jpg);
+      image-set(
+        url(../images/people-officePC/people-office.jpg) 1x,
+        url(../images/people-officePC/people-office2x.jpg) 2x
+      );
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -596,14 +614,11 @@ button {
   .section-our-advantages {
     padding-top: 96px;
     padding-bottom: 96px;
-    max-width: 736px;
-    margin: 0 auto;
   }
 
   .section-strategy-ul-li {
     width: calc((100% - 30px) / 2);
     box-sizing: border-box;
-    margin-bottom: 72px;
   }
 
   .section-strategy-ul {
@@ -611,7 +626,8 @@ button {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 30px;
+    gap: 24px;
+    row-gap: 70px;
   }
 
   .strategy {
@@ -797,6 +813,10 @@ button {
     margin: 0 auto;
     box-sizing: border-box;
   }
+  .container-our-team {
+    max-width: 584px;
+  }
+
   .our-team-hero {
     font-family: "Roboto";
     font-style: normal;
@@ -815,9 +835,10 @@ button {
     flex-wrap: wrap;
     justify-content: center;
     margin: 0;
-    gap: 64px;
+    gap: 24px;
     border-radius: 0px 0px 4px 4px;
     padding: 0;
+    row-gap: 64px;
   }
   .team-item {
     background: #ffffff;
@@ -899,6 +920,9 @@ button {
 
     margin: 0 auto;
     box-sizing: border-box;
+  }
+  .container-our-team {
+    max-width: 1440px;
   }
 
   .our-team-hero {
@@ -1532,7 +1556,7 @@ button {
   }
   .footer-model-p {
     padding: 0;
-    margin: 0;
+    margin-bottom: 16px;
   }
   .footer-model-container {
     margin-left: 0;
@@ -1699,11 +1723,14 @@ button {
   overflow: hidden;
 }
 .label-privacy {
+  display: flex;
+  align-items: center;
   font-weight: 400;
   font-size: 11px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
+  gap: 8px;
 }
 .checkbox-icon {
   width: 16px;
@@ -1724,11 +1751,12 @@ button {
   fill: var(--checkbox-icon-color, #f4f4fd);
 }
 .svg-icon-checkbox {
+  flex-shrink: 0;
   fill: #fcfcfc;
 }
+.Privacy-Policy-span {
+}
 .privacy-link {
-  display: flex;
-  margin-left: 19px;
   color: #4d5ae5;
 }
 .submit-button {
